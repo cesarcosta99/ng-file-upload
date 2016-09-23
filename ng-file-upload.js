@@ -19,17 +19,20 @@
     return directive;
 
     function link(scope, element, attrs) {
-      $('#upload-input').fileupload({
+      scope.progress = 0;
+
+      angular.element('#upload-input').fileupload({
         dataType: 'json',
         add: function (event, data) {
+          scope.progress = 0;
           data.submit();
         },
         done: function (event, data) {
         },
         progressall: function (event, data) {
-          $('#progress .bar').css(
-            'width', parseInt(data.loaded / data.total * 100, 10) + '%'
-          );
+          scope.$apply(function () {
+            scope.progress = parseInt(data.loaded / data.total * 100, 10);
+          });
         }
       });
     }
