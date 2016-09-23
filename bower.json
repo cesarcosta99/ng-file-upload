@@ -1,0 +1,23 @@
+{
+  "name": "ng-file-upload",
+  "homepage": "https://github.com/cesarcosta99/ng-file-upload",
+  "authors": [
+    "César Costa <costa.cesar.a@hotmail.com>"
+  ],
+  "description": "AngularJS directive to file upload",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "blueimp-file-upload": "jquery-file-upload#^9.12.5",
+    "jquery-ui": "^1.12.1",
+    "bootstrap": "^3.3.7"
+  }
+}
